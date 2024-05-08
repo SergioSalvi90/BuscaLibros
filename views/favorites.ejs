@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+</head>
+<body>
+    
+<h3 class="favorites-title">Libros favoritos</h3>
+
+<% if (books.length > 0) { %>
+    <ul class="favorites-list">
+        <% books.forEach((book, index) => { %>
+            <li class="favorite-item">
+                <h2> <%= book.title %> </h2>
+                <p>Autor: <%= book.author %></p>
+                <p>Descripción: <%= book.description %></p>
+                <img src="<%= book.coverURL %>" alt="Portada del libro">
+                
+                <form action="/favorites/remove" method="post">
+                    <input type="hidden" name="id" value="<%= index %>">
+                    <button type="submit" class="search-button">Eliminar de favoritos</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No hay libros favoritos.</p>
+<% } %>
+</body>
+</html>
+
+

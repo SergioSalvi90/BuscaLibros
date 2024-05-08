@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <title></title>
+</head>
+<body>
+    <h3 class="search-title">Resultados de la búsqueda</h3>
+
+<form action="/search" method="get" class="search-form">
+    <input type="text" name="query" placeholder="Buscar libros..." class="search-input">
+    <button type="submit" class="search-button">Buscar</button>
+</form>
+
+<% if (books.length > 0) { %>
+    <ul class="book-list">
+        <% books.forEach(book => { %>
+            <li class="book-item">
+                <h2 class="book-title"> <%= book.title %> </h2>
+                <p class="book-author">Autor: <%= book.author %></p>
+                <p class="book-description">Descripción: <%= book.description %></p>
+                <img src="<%= book.coverURL %>" alt="Portada del libro" class="book-cover">
+               
+                <form action="/favorites/add" method="post" class="add-favorites-form">
+                    <input type="hidden" name="title" value="<%= book.title %>" class="book-title-input">
+                    <input type="hidden" name="author" value="<%= book.author %>" class="book-author-input">
+                    <input type="hidden" name="description" value="<%= book.description %>" class="book-description-input">
+                    <input type="hidden" name="coverURL" value="<%= book.coverURL %>" class="book-coverURL-input">
+                    <button type="submit" class="add-favorites-button">Agregar a favoritos</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p class="no-books-message">No se encontraron libros.</p>
+<% } %>
+
+</body>
+</html>
+
+
+
+
+

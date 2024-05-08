@@ -1,0 +1,146 @@
+
+
+/* estilos para inicio.ejs */
+.body-inicio {
+    
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+ background-image: url('assets/fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #0056b3; 
+}
+
+
+/* Estilos para search.ejs */
+
+.search-title {
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+
+.search-form {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+
+.search-input {
+    width: 300px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+}
+
+
+.search-button {
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.book-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.book-item {
+    margin-bottom: 20px;
+}
+
+.book-title {
+    font-size: 18px;
+}
+
+.book-author {
+    font-style: italic;
+}
+
+.book-description {
+    color: #666;
+}
+
+.book-cover {
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.add-favorites-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.no-books-message {
+    font-style: italic;
+    color: #999;
+}
+
+
+
+/* Estilos para  favoritos */
+.favorites-list {
+    list-style: none; 
+    padding: 0; 
+}
+
+/* Estilos para cada elemento de la lista */
+.favorite-item {
+    margin-bottom: 20px; 
+    padding: 20px; 
+    background-color: #f9f9f9;
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos para el título */
+.favorites-title {
+    text-align: center; 
+    margin-top: 50px; 
+}
